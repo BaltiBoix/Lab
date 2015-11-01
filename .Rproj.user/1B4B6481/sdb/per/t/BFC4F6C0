@@ -1,0 +1,17 @@
+{
+    "contents" : "require(dplyr, quietly = TRUE)\nrequire(ggplot2, quietly = TRUE)\nrequire(zoo, quietly = TRUE)\nrequire(grid, quietly = TRUE)\nrequire(gridExtra, quietly = TRUE)\n\nif(!exists(\"ordencomplist\")) source(\"ordencomplist.R\", encoding=\"UTF-8\")\nif(!exists(\"plotgraf\")) source(\"plotgraf.R\", encoding=\"UTF-8\")\nif(!exists(\"leedatos\")) source(\"leedatos.R\", encoding=\"UTF-8\")\nif(!exists(\"filtraRHC\")) source(\"filtraRHC.R\", encoding=\"UTF-8\")\nif(!exists(\"ttest\")) source(\"ttest.R\", encoding=\"UTF-8\")\n\nordencomp<-ordencomplist()\n\ndf<-leedatos()\n\ndf<-filtraRHC()\n\nttestdf<- ttest()\n\nplotgraf()\n",
+    "created" : 1446395315850.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2316277665",
+    "id" : "BFC4F6C0",
+    "lastKnownWriteTime" : 1446414059,
+    "path" : "~/RProjects/Lab/TestSGLDatos.R",
+    "project_path" : "TestSGLDatos.R",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

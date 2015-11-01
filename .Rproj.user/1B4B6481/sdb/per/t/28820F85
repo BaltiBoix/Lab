@@ -1,0 +1,18 @@
+{
+    "contents" : "filtraRHC<-function(){\n      \n      df1<-filter(df, componente==\"I. VISCOSIDAD NOR 4.3 CST A 100§C\")\n      df1<-mutate(df1, UCO=ifelse(valorn>132, TRUE, FALSE))\n      df1<-select(df1, fecha, UCO)\n      \n      df<-merge(df, df1)\n      \n      subq<-group_by(df, componente)\n      dfq<-summarize(subq, q1 = quantile(valorn, 0.05, na.rm = TRUE), q2 = quantile(valorn, 0.95, na.rm = TRUE) ) \n      \n      for(i in 1:nrow(dfq)){\n            \n            df1<-mutate(filter(df, componente==dfq$componente[i]), \n                        inbound=ifelse(valorn>=dfq[i,]$q1 & valorn<=dfq[i,]$q2, TRUE, FALSE))\n            if(i==1){\n                  df2<-df1\n            }else{\n                  df2<-rbind(df2,df1)\n            }\n      }\n      \n      df2\n\n}",
+    "created" : 1446396701233.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3886775758",
+    "id" : "28820F85",
+    "lastKnownWriteTime" : 1446398610,
+    "path" : "~/RProjects/Lab/filtraRHC.R",
+    "project_path" : "filtraRHC.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 4,
+    "source_on_save" : true,
+    "type" : "r_source"
+}

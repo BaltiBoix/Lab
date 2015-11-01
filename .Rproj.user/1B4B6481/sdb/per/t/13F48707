@@ -1,0 +1,18 @@
+{
+    "contents" : "ttest<-function(){\n      \n      ttestdf<- data.frame(componente=character(), meanTRUE=double(), \n                           meanFALSE=double(), pt=character(),\n                           stringsAsFactors=FALSE)\n      \n      for(i in 1:length(ordencomp)){\n            \n            ttestdf[i, 1]<-ordencomp[i]      \n            \n            if(nrow(filter(df, componente==ordencomp[i])) > 30){\n                  \n                  tt<-t.test(select(filter(df, UCO==TRUE, componente==ordencomp[i]), valorn), \n                             select(filter(df, UCO==FALSE, componente==ordencomp[i]), valorn), \n                             var.equal=TRUE, alternative=\"two.sided\", conf.level = 0.95)      \n                  \n                  ttestdf[i, 2]<-as.double(tt$estimate[1])      \n                  ttestdf[i,3]<-as.double(tt$estimate[2])\n                  ttestdf[i,4]<-ifelse(as.double(tt$p.value) < 0.05, \"SI\", \"NO\")\n            }\n      }\n      \n      names(ttestdf)<-c(\"Componente\", \"IVn > 132\", \"IVn <= 132\", \"p (student t test)\")\n      \n      ttestdf\n}",
+    "created" : 1446409963298.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2257408088",
+    "id" : "13F48707",
+    "lastKnownWriteTime" : 1446413609,
+    "path" : "~/RProjects/Lab/ttest.R",
+    "project_path" : "ttest.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 7,
+    "source_on_save" : true,
+    "type" : "r_source"
+}

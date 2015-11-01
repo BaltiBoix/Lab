@@ -1,0 +1,18 @@
+{
+    "contents" : "leedatos<-function(){\n      \n      df<-read.table(\"TestSGLDatos1.csv\", sep = \";\")\n      df<-df[3:nrow(df),]\n      \n      names(df)<-c(\"fecha\", \"componente\", \"valor\", \"uom\")\n      \n      df<-filter(df, valor != \"\")\n      \n      df$componente<-factor(df$componente, levels = ordencomp)\n      \n      mutate(df, valorn=as.numeric(as.character(valor)),\n           fecha=as.POSIXct(fecha, format = \"%d/%m/%Y %H:%M:%S\"),\n           trim=as.character(as.yearqtr(fecha))) \n      \n}",
+    "created" : 1446396447113.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "453736457",
+    "id" : "A7044E01",
+    "lastKnownWriteTime" : 1446403014,
+    "path" : "~/RProjects/Lab/leedatos.R",
+    "project_path" : "leedatos.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

@@ -1,0 +1,18 @@
+{
+    "contents" : "ordencomplist<-function(){\n      \n      c(     \"DENSIDAD 15§C\",\n             \"AZUFRE\", \n             \"NITROGENO\", \n             \"COLOR ASTM\",                       \n             \"P.INICIAL\",                        \n             \"1% RECOGIDO\", \n             \"5% RECOGIDO\", \n             \"10% RECOGIDO\", \n             \"20% RECOGIDO\", \n             \"30% RECOGIDO\",                     \n             \"40% RECOGIDO\", \n             \"50% RECOGIDO\", \n             \"60% RECOGIDO\",                     \n             \"70% RECOGIDO\",  \n             \"80% RECOGIDO\", \n             \"90% RECOGIDO\", \n             \"95% RECOGIDO\",                     \n             \"99% RECOGIDO\",\n             \"P.FINAL\", \n             \"VOL.FINAL\",\n             \"EVAPORADO A 360§C (D2887)\", \n             \"AGUA X DESTILACION\", \n             \"INDICE REFRACCION A 60§C\",         \n             \"INDICE VISCOSIDAD\", \n             \"I. VISCOSIDAD NOR 4.3 CST A 100§C\", \n             \"VISCOSIDAD A 100§C\", \n             \"VISCOSIDAD A 65§C\")\n\n}",
+    "created" : 1446404908018.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2333138034",
+    "id" : "600F03F",
+    "lastKnownWriteTime" : 1446410391,
+    "path" : "~/RProjects/Lab/ordencomplist.R",
+    "project_path" : "ordencomplist.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 6,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

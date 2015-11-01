@@ -1,0 +1,31 @@
+ordencomplist<-function(){
+      
+      c(     "DENSIDAD 15§C",
+             "AZUFRE", 
+             "NITROGENO", 
+             "COLOR ASTM",                       
+             "P.INICIAL",                        
+             "1% RECOGIDO", 
+             "5% RECOGIDO", 
+             "10% RECOGIDO", 
+             "20% RECOGIDO", 
+             "30% RECOGIDO",                     
+             "40% RECOGIDO", 
+             "50% RECOGIDO", 
+             "60% RECOGIDO",                     
+             "70% RECOGIDO",  
+             "80% RECOGIDO", 
+             "90% RECOGIDO", 
+             "95% RECOGIDO",                     
+             "99% RECOGIDO",
+             "P.FINAL", 
+             "VOL.FINAL",
+             "EVAPORADO A 360§C (D2887)", 
+             "AGUA X DESTILACION", 
+             "INDICE REFRACCION A 60§C",         
+             "INDICE VISCOSIDAD", 
+             "I. VISCOSIDAD NOR 4.3 CST A 100§C", 
+             "VISCOSIDAD A 100§C", 
+             "VISCOSIDAD A 65§C")
+
+}
